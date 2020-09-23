@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>showroom</title>
+    <script>
+function action() {
+    var laptop=['lenovo','sony','hp'];
+    var mobile=['iphone','samsung','sony'];
+    var tv=['sony','smasung','hp'];
+    var printThis='<ul>';
+    var x = document.getElementById("dropdown").value;
+    
+    if(x==0)
+    {
+        laptop.forEach(element => {
+            printThis += "<li>"+element+"</li>";
+        });
+    }
+    else if(x==1)
+    {
+        mobile.forEach(element => {
+            printThis += "<li>"+element+"</li>";
+        });
+    }
+    else if(x==2)
+    {
+        tv.forEach(element => {
+            printThis += "<li>"+element+"</li>";
+        });
+    }
+    document.getElementById("demo").innerHTML = printThis;
+}
+
+    </script>
+</head>
+<body>
+    <div>
+    <select id="dropdown" onchange="action()">
+        <option >--select--</option>
+        <option value="0">Laptop</option>
+        <option value="1">Mobile</option>
+        <option value="2">Tv</option>
+      </select>
+      </div>
+      
+      <p>Welcome to showroom</p>
+      
+      <div id="demo" style="background-color: bisque"; height: 20px; width:10px > </div>
+</body>
+</html>

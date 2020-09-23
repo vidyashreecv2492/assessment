@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate</title>
+    <script>
+        function validateForm(){
+            var username=document.getElementById('username').value;
+            var password=document.getElementById('password').value;
+            var email=document.getElementById('email').value;
+            var phone=document.getElementById('phone').value;
+            var list=['ramya','supreetha','akanksha','ashritha'];
+            if(username="" || username.length<5||username.length>15)
+            {
+                alert("invalid username");
+            }
+            else if(password=="" ||(!password.match(/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/)) ) 
+            {
+                alert("invalid password");
+
+            }
+            
+            else if(email==""  || email.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]/))
+            {
+                alert("invalid email");
+            }
+            else if(phone=="" || (!phone.match(/\d{10}/)))
+            {
+                alert("enter valid phone number");
+            }
+            else if(list.indexOf(username) !== -1 )
+            {
+                alert('user name exists');
+                document.getElementById('username').focus();
+            }
+            
+            else{
+                alert("Registered");
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <form >
+            Name:<input type="text" name="text" id="username" /><br/><br/>
+            Password:<input type="password" name="passwd" id="password"/><br/><br/>
+             Email:<input type="email" name="email" id="email" /><br/><br/>
+            Phone no:<input type="number" name="phone" id="phone" /><br/><br/>
+           
+            <input type="submit" name="submit" id="submit" onclick="validateForm()"/>
+        </form>
+    </div>
+    
+</body>
+</html>

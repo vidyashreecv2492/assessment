@@ -1,0 +1,33 @@
+[       
+    {
+        "name": "RRR",
+        "city": "Mysore",
+        "type": "Veg",
+        "cuisine": ["South Indian","North Indian"]
+    },
+    {
+        "name": "Southern star",
+        "city": "Mysore",
+        "type": "Non-veg",
+        "cuisine": ["South Indian","North India"]
+    },
+    {
+        "name": "Empire",
+        "city": "Bangalore",
+        "type": "Non-veg",
+        "cuisine": ["Indian","chinese"]
+    },
+    {
+        "name": "Daba",
+        "city": "Madikeri",
+        "type": "Non-Veg",
+        "cuisine": ["Indian","chinese"]
+    },
+    {
+        "name": "Nalapak",
+        "city": "Mysore",
+        "type": "Veg",
+        "cuisine": ["Indian"]
+    }]
+    
+    
